@@ -21,14 +21,15 @@ for ($i = 0; $i < 30; $i++){
 
 
 
-
 //         2. sukurkite masyvą su 10 skaičių nuo 0 iki 10
 
-$masyvas2 = [];
+$masyvas2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-for ($i = 0; $i < 10; $i++){
-    print_r($masyvas2);
-}
+// $masyvas2 = [];
+
+// for ($i = 0; $i < 10; $i++){
+//     print_r($masyvas2);
+// }
 
 "<br>";
 
@@ -45,7 +46,7 @@ for ($i = 0; $i < 10; $i++){
 //         2c. pasinaudoję ciklu atspausdinkite 100 atsitiktinių skaičių iš 2b masyvo.
 //         t.y kiekvienoje ciklo iteracijoje imkite atsitiktinį 2b masyvo skaičių.
 
-
+// nemoku
 
 "<br>";
 "<hr>";
@@ -71,6 +72,8 @@ for ($i = 0; $i < 10; $i++){
 }
 
 //         3b. atspausdinkite duomenis. (gausis skaičių stačiakampis).
+
+print_r($dvimatis);
 
 //         3c. padarykite tą patį, ką  darėte 3b, tik spausdinkite tuos skaičius pakeltus kvadratu
 
@@ -119,10 +122,13 @@ $masyv = [[]];
 
 //          iš eilės. maži masyvai bus tokie patys kaip 4. užduotyje. jų reikšmes užpildykite 5. 
 //          masyvų reikšmėmis. t.y imate random vardą, ir priskiriate konstruojamam gyvūnui ir tt.
+
+//nesuprantu
         
 //         5c. atvaizduokite gyvūnus iš 5b masyvo. vienas gyvūnas - viena eilutė.
 
-
+echo $species . "<br>";
+//?????
 
 
 "<br>";
@@ -193,10 +199,10 @@ function multiply($a = 1, $b = 2){
     echo $a * $b . "<br>";
 }
 
-//         1e. sukurkite funkciją kuri apskaičiuoja skritulio PLOTĄ. ši funkcija priima 1 parametrą bei naudoja 1c. funkciją savo viduje, kad gautų PI reikšmę.
+//1e. sukurkite funkciją kuri apskaičiuoja skritulio PLOTĄ. ši funkcija priima 1 parametrą bei naudoja 1c. funkciją savo viduje, kad gautų PI reikšmę.
 
+$pi = myPi();
 plotas(10);
-$r = 10;
 
 function plotas($r){
     echo "Plotas yra " . $r * $pi . "<br>";
@@ -207,14 +213,31 @@ function plotas($r){
 
 
 
-//         1f. sukurkite funkciją kuri apskaičiuoja skritulio ILGĮ. ši funkcija priima 1 parametrą
-//         bei naudoja 1c. funkciją savo viduje, kad gautų PI reikšmę.
+//1f. sukurkite funkciją kuri apskaičiuoja skritulio ILGĮ. ši funkcija priima 1 parametrą
+//bei naudoja 1c. funkciją savo viduje, kad gautų PI reikšmę.
+
+sk_ilgis();
+
+function sk_ilgis($r=15, $pi = 3.14){
+    echo round(2 * $pi * $r, 2);
+}
+
+// cia siaip funkcija padariau, nes iskviesti kita funcija i funkcija nemoku
+"<br>";
+
+
+
 //         1g. sukurkite funkciją kuri: priima vieną parametrą. savyje iškviecia 1e ir 1f funkcijas
 //         ir atspausdina:
 //          apskritimo ilgis: (tai ka gražino funkcija 1f)
 //          apskritimo plotas: (tai ka gražino funkcija 1g)
 
+funkcija();
 
+function funkcija(){
+    return sk_ilgis();
+    return funkcija();
+}
 
 
 
