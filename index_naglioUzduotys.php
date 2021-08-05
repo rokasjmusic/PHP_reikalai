@@ -11,8 +11,8 @@ for ($i = 0; $i < 30; $i++){
     echo $masyvas . " ";
 }
 
-"<br>";
-"<hr>";
+echo "<br>";
+echo "<hr>";
 
 
 
@@ -31,7 +31,7 @@ $masyvas2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 //     print_r($masyvas2);
 // }
 
-"<br>";
+echo "<br>";
 
 //         2b. sukurkite kitą masyvą su 10 skaičių nuo 10 iki 20
 
@@ -48,8 +48,8 @@ for ($i = 0; $i < 10; $i++){
 
 // nemoku
 
-"<br>";
-"<hr>";
+echo "<br>";
+echo "<hr>";
 
 
 // ----------------------------------------------------------------
@@ -80,8 +80,8 @@ print_r($dvimatis);
 
 
 
-"<br>";
-"<hr>";
+echo "<br>";
+echo "<hr>";
 
 // ----------------------------------------------------------------
 
@@ -99,8 +99,8 @@ print_r($gyvunas);
 
 
 
-"<br>";
-"<hr>";
+echo "<br>";
+echo "<hr>";
 
 // ----------------------------------------------------------------
 
@@ -131,8 +131,8 @@ echo $species . "<br>";
 //?????
 
 
-"<br>";
-"<hr>";
+echo "<br>";
+echo "<hr>";
 
 // ----------------------------------------------------------------
 
@@ -155,8 +155,8 @@ for ($i = 1; $i < 10; $i++) {
 
 
 
-"<br>";
-"<hr>";
+echo "<br>";
+echo "<hr>";
 // ----------------------------------------------------------------
 
 echo "FUNKCIJOS" . "<br>";
@@ -188,8 +188,8 @@ function myPi(){
     return 3.1415926;
 }
 
-"<br>";
-"<hr>";
+echo "<br>";
+echo "<hr>";
 
 //         1d. sukurkite funkciją kuri gražina dviejų parametrų sąndaugą.
 
@@ -223,7 +223,7 @@ function sk_ilgis($r=15, $pi = 3.14){
 }
 
 // cia siaip funkcija padariau, nes iskviesti kita funcija i funkcija nemoku
-"<br>";
+echo "<br>";
 
 
 
