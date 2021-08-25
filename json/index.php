@@ -44,12 +44,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && !isset($_POST['id'])){
     
     $data[] = $vehicle;
     setData($data);
-    // header("location:./");
-    // die;
+    header("location:./");
+    die;
 }
 
 function getData(){
-    return json_decode( file_get_contents('./data.txt', 1) );
+    $data = json_decode( file_get_contents('./data.txt', 1) );
+    foreach ($data as &$car) {
+      $car = (array) $car;
+    }
+    return $data;
 }
 
 function setData($arr){
@@ -106,6 +110,11 @@ function newId() {
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <title>Document</title>
+    <style>
+        body{
+            margin:20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -148,7 +157,7 @@ function newId() {
     }else{
             echo '
             <input type="hidden" name="id" value="'. $vehicle['id'].' ">
-            <button class="btn btn-info" type="submit">Update Car</button>';
+            <button class="btn btn-info col-sm-2" type="update">Update Car</button>';
     } ?>
 
     </form>
@@ -166,9 +175,9 @@ function newId() {
         </tr>
 
 
-        <?php foreach ($cars as $vehycle) {  ?>
+        <?php foreach (getData() as $vehicle) {  ?>
             <tr>
-            <td> <?= $vehycle[newId()]  ?> </td>
+            <td> <?= $vehicle['id']  ?> </td>
                 <td> <?= $vehicle['brand']  ?> </td>
                 <td> <?= $vehicle['model']  ?> </td>
                 <td> <?= $vehicle['color']  ?> </td>
